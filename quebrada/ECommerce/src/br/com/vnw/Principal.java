@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Principal {
-    public static void main(String[] args) {
+    public static <Pagamento> void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
         System.out.println("Super hiper mega blaster master plus advanced Ecommerce Grupo 4 - VNW");
@@ -22,7 +22,7 @@ public class Principal {
         Carrinho carrinho = new Carrinho(nomeDigitado);
         Pagamento pagamento = new Pagamento();
         
-        // Exibe uma mensagem de boas vindas
+        // Exibe uma mensagem de Boas-vindas
         System.out.printf("\nOlá " + usuario.mostrarNome() + "! " + "Bem vindo(a) a loja online do Grupo 4 VNW.%n"
                           + "Por favor, selecione uma das opções abaixo: \n");
 

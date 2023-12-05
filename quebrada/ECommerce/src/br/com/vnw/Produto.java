@@ -6,17 +6,17 @@ import java.util.List;
 public class Produto {
     public int idProduto;
     public String nome;
-    public int valor;
-    private int quantidade;
+    public double valor;
+    int quantidade;
     LocalDate dataInsercao;
 
     // Construtor da classe Produto para inicializar seus atributos
     public Produto(int idProduto, String nome, double valor, int quantidade) {
-        this.IdProduto = idProduto;
-        this.Nome = nome;
-        this.Valor = valor;
-        this.Quantidade = quantidade;
-        this.DataInsercao = LocalDate.now();
+        this.idProduto = idProduto;
+        this.nome = nome;
+        this.valor = valor;
+        this.quantidade = quantidade;
+        this.dataInsercao = LocalDate.now();
     }
 
     // Método estático para criar um novo objeto Produto
