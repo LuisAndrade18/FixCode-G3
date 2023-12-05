@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Produto {
     public int idProduto;
-    public string nome;
+    public String nome;
     public int valor;
     private int quantidade;
     LocalDate dataInsercao;
@@ -28,7 +28,7 @@ public class Produto {
     // recebe como parâmetros uma lista de produtos (List<Produto>), um ID, um nome, um valor e 
     // uma quantidade para criar e adicionar um novo produto à lista de produtos existente.
     public static void adicionarNovoProduto(List<Produto> listaProdutos, int id, String nome, double valor, int quantidade) {
-        Produto novoProduto = criarNovoProduto();
+        Produto novoProduto = criarNovoProduto(id, nome, valor, quantidade);
         listaProdutos.add(novoProduto);
         System.out.println("Novo produto adicionado com sucesso!");
     }

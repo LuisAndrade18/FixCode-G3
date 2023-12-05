@@ -97,6 +97,7 @@ public class Principal {
                     System.out.println("Opção inválida. Por favor, escolha uma opção válida.");
             }
         } while (opcao != 6);
+        scanner.close();
     }
 
     // Inicializa a lista de produtos com alguns produtos de exemplo

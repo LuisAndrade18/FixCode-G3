@@ -10,6 +10,6 @@ public class Usuario {
 
     // Retorna o nome do usuário
     public String mostrarNome() {
-        return ;
+        return nomeUsuario;
     }
 }

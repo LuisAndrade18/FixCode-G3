@@ -40,7 +40,7 @@ public class Carrinho {
                         produto.valor,
                         quantidade);
 
-                produtosNoCarrinho.add();
+                produtosNoCarrinho.add(copiaProduto);
             }
 
             System.out.println("\nProduto(s) adicionado(s) ao carrinho com sucesso!");
