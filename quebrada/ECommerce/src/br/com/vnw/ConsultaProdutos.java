@@ -13,8 +13,8 @@ public class ConsultaProdutos {
     // Lista os produtos disponíveis ou informa se não há produtos
     public void listarProdutos() {
         if (listaProdutos.isEmpty()) { // isEmpty() é um método utilizado em listas, conjuntos ou mapas, verifica se está vazio
-            System.out.println("- ID: " + produto.idProduto + " | Nome: " + produto.nome +
-                    " | Quantidade: " + produto.quantidade + " | Valor: " + produto.valor);
+            System.out.println("- ID: " + listaProdutos.get(0) + " | Nome: " + listaProdutos +
+                    " | Quantidade: " + listaProdutos + " | Valor: " + listaProdutos);
         } else {
             System.out.println("Produtos disponíveis:");
             // for-each utilizado para percorrer cada Produto na lista de produtos (listaProdutos) e exibir as informações especificadas

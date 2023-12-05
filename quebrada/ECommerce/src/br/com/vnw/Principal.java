@@ -5,14 +5,16 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Principal {
-    public static <Pagamento> void main(String[] args) {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
         System.out.println("Super hiper mega blaster master plus advanced Ecommerce Grupo 4 - VNW");
         // Solicita e armazena o nome do usuário
         System.out.print("Digite o nome do usuário: ");
         String nomeDigitado = scanner.nextLine();
-        Usuario usuario = new Usuario(nomeDigitado); // cria uma instância da classe Usuario e atribui a essa instância o nome informado pelo usuário, capturado pela variável nomeDigitado.
+        Usuario usuario = new Usuario(nomeDigitado); // cria uma instância da classe Usuario 
+        //e atribui a essa instância o nome informado pelo usuário, capturado pela variável 
+        //nomeDigitado.
         double totalCompra = 0; // Inicializando com 0
 
         // Inicializa a lista de produtos com alguns produtos de exemplo
@@ -23,14 +25,15 @@ public class Principal {
         Pagamento pagamento = new Pagamento();
         
         // Exibe uma mensagem de Boas-vindas
-        System.out.printf("\nOlá " + usuario.mostrarNome() + "! " + "Bem vindo(a) a loja online do Grupo 4 VNW.%n"
+        System.out.printf("\nOlá " + usuario.mostrarNome() + "! " + 
+        "Bem vindo(a) a loja online do Grupo 4 VNW.%n"
                           + "Por favor, selecione uma das opções abaixo: \n");
 
         int opcao;
         do {
             exibirMenu();
             opcao = scanner.nextInt();
-//            scanner.nextLine(); // Limpar o buffer após a leitura do inteiro
+            scanner.nextLine(); // Limpar o buffer após a leitura do inteiro
             System.out.println();
 
             
@@ -78,7 +81,7 @@ public class Principal {
                     break;
                 case 3:
                     adicionarNovoProduto(scanner, listaProdutos);
-//                    System.out.println("\nPressione 'Enter' para voltar ao Menu principal.");
+                    System.out.println("\nPressione 'Enter' para voltar ao Menu principal.");
                     break;
                 case 4:
                     carrinho.exibirItensNoCarrinho();
@@ -88,7 +91,7 @@ public class Principal {
                 case 5:
                     totalCompra = finalizarCompra(carrinho, listaProdutos, pagamento, totalCompra);
                     System.out.println("\nPressione 'Enter' para voltar ao Menu principal.");
-//                    scanner.nextLine(); // Limpa o buffer após finalizar a compra
+                    scanner.nextLine(); // Limpa o buffer após finalizar a compra
                     break;
                 case 6:
                     System.out.println("Volte sempre!");
@@ -123,7 +126,9 @@ public class Principal {
     }
 
     // Permite ao usuário adicionar um novo produto à lista de produtos
-    // estão sendo recebidos dois parâmetros: um objeto do tipo Scanner chamado scanner para coletar dados do usuário e uma lista do tipo Produto chamada listaProdutos para adicionar novos produtos.
+    // estão sendo recebidos dois parâmetros: um objeto do tipo Scanner chamado 
+    //scanner para coletar dados do usuário e uma lista do tipo Produto chamada listaProdutos
+    //para adicionar novos produtos.
     private static void adicionarNovoProduto(Scanner scanner, List<Produto> listaProdutos) {
         System.out.print("Digite o ID do produto: ");
         int id = scanner.nextInt();
