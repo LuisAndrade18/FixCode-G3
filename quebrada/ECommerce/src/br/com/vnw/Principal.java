@@ -22,7 +22,7 @@ public class Principal {
    
 
         ConsultaProdutos consultaProdutos = new ConsultaProdutos(listaProdutos);
-        Carrinho carrinho = new Carrinho(nomeDigitado, listaProdutos);
+        Carrinho carrinho = new Carrinho(nomeDigitado);
         Pagamento pagamento = new Pagamento();
         
         // Exibe uma mensagem de Boas-vindas
