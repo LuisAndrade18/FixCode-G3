@@ -28,7 +28,7 @@ public class Pagamento {
                 
                 if (opcao >= 1 && opcao <= 4) {
                     SwitchDePagamento();
-                    return false; // Forma de pagamento válida
+                    return true; // Forma de pagamento válida
                 }
             } else {
                 leitor.nextLine(); // Limpar o buffer

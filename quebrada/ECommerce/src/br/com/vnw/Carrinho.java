@@ -8,16 +8,11 @@ public class Carrinho {
     private List<Produto> produtosNoCarrinho;
 
     // Construtor para referenciar a variável com o nome informado pelo usuário na Classe Principal
-    public Carrinho(String nomeUsuario) {
+    public Carrinho(String nomeUsuario, List<Produto> produtosNoCarrinho) {
         this.nomeUsuario = nomeUsuario;
-        this.produtosNoCarrinho = new ArrayList<>();
+        this.produtosNoCarrinho = produtosNoCarrinho;
     }
     
-    // Construtor da classe Carrinho para inicializar a lista de produtos
-    public Carrinho() {
-        this.produtosNoCarrinho = new ArrayList<>();
-    }
-
     // Adiciona um produto ao carrinho com base na quantidade especificada
     public boolean adicionarProduto(Produto produto, int quantidade) {
         if (produto != null || quantidade > 0) {
@@ -59,6 +54,7 @@ public class Carrinho {
     public void exibirItensNoCarrinho() {
         if (produtosNoCarrinho.isEmpty()) {
             System.out.println("Carrinho vazio.");
+            System.out.println(produtosNoCarrinho.size());
         } else {
             System.out.println(nomeUsuario + ", estes são os produtos atualmente no carrinho:");
             for (Produto produto : produtosNoCarrinho) {

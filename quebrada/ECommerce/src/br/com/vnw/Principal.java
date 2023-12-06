@@ -19,9 +19,10 @@ public class Principal {
 
         // Inicializa a lista de produtos com alguns produtos de exemplo
         List<Produto> listaProdutos = inicializarListaProdutos();
+   
 
         ConsultaProdutos consultaProdutos = new ConsultaProdutos(listaProdutos);
-        Carrinho carrinho = new Carrinho(nomeDigitado);
+        Carrinho carrinho = new Carrinho(nomeDigitado, listaProdutos);
         Pagamento pagamento = new Pagamento();
         
         // Exibe uma mensagem de Boas-vindas

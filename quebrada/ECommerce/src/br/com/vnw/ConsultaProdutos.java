@@ -3,7 +3,7 @@ package br.com.vnw;
 import java.util.List;
 
 public class ConsultaProdutos {
-    private List<Produto> listaProdutos;
+    public List<Produto> listaProdutos;
 
     // Construtor da classe ConsultaProdutos
     public ConsultaProdutos(List<Produto> listaProdutos) {
@@ -13,13 +13,13 @@ public class ConsultaProdutos {
     // Lista os produtos disponíveis ou informa se não há produtos
     public void listarProdutos() {
         if (listaProdutos.isEmpty()) { // isEmpty() é um método utilizado em listas, conjuntos ou mapas, verifica se está vazio
-            System.out.println("- ID: " + listaProdutos.get(0) + " | Nome: " + listaProdutos +
-                    " | Quantidade: " + listaProdutos + " | Valor: " + listaProdutos);
+            System.out.println("Não há produtos disponiveis");
         } else {
             System.out.println("Produtos disponíveis:");
             // for-each utilizado para percorrer cada Produto na lista de produtos (listaProdutos) e exibir as informações especificadas
             for (Produto produto : listaProdutos) {
-                System.out.println("Não há produtos no carrinho.");
+                System.out.println("- ID: " + produto.idProduto + " | Nome: " + produto.nome +
+                        " | Quantidade: " + produto.quantidade + " | Valor: " + produto.valor);
             }
         }
     }
